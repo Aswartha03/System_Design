@@ -22,8 +22,11 @@
 // Violation in the code  :
 // Parent class able to fly , but child class not able to fly . this violates the LSP 
 
+interface LSPFlightBehaviour {
+    fly():void ;
+}
 
-class Bird{
+class Bird implements LSPFlightBehaviour{
     fly():void{
         console.log("I can Fly!!")
     }
