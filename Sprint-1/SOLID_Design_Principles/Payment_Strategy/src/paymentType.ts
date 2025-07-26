@@ -5,7 +5,6 @@ class Payment{
     constructor(typeOfPayment : PaymentStrategy) {
         this.typeOfPayment = typeOfPayment ;
     }
-
     process(amount:number):void{
         this.typeOfPayment.doPayment(amount)
     }
