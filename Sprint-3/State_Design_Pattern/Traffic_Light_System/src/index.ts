@@ -44,6 +44,5 @@ class TrafficLight {
 let trafficLight = new TrafficLight(new RedState())
 for(let i=0;i<10;i++){
   trafficLight.handleVehicle()
-
 }
 
