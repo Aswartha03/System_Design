@@ -5,8 +5,8 @@ class Payment {
     constructor(paymentype) {
         this.paymentType = paymentype;
     }
-    processPayment(amount) {
-        this.paymentType.pay(amount);
+    processPayment(coffee) {
+        this.paymentType.pay(coffee);
     }
     setPayment(paymentType) {
         this.paymentType = paymentType;

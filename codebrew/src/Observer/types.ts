@@ -10,6 +10,6 @@ export interface Observer{
 
 export class CustomerDisplay implements Observer{
     update(order:Order): void {
-        console.log(`${order} is Ready`);
+        console.log(`Order is Ready`);
     }
 }

@@ -1,5 +1,7 @@
+import { Coffee } from "../decorator/types"
+
 export interface PaymentStrategy{
-    pay(amount:number):void
+    pay(coffee:Coffee):void
 }
 
 export class Payment{
@@ -7,8 +9,8 @@ export class Payment{
     constructor(paymentype:PaymentStrategy){
         this.paymentType = paymentype
     }
-    processPayment(amount:number):void{
-        this.paymentType.pay(amount)
+    processPayment(coffee:Coffee):void{
+        this.paymentType.pay(coffee)
     }
     setPayment(paymentType:PaymentStrategy){
         this.paymentType = paymentType

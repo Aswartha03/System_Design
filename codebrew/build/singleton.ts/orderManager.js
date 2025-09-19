@@ -20,12 +20,14 @@ class OrderManager {
         for (let coffee of this.allOrders) {
             let coffee = new mainClass_1.MainStateClass(new states_1.Pending());
             coffee.processToNext();
+            coffee.processToNext();
+            coffee.processToNext();
         }
     }
     makePayments() {
         for (let coffee of this.allOrders) {
             let myPayment = new paymentStrategy_1.Payment(new strategies_1.CreditCardPayment());
-            myPayment.processPayment(coffee.getCost());
+            myPayment.processPayment(coffee);
         }
     }
 }

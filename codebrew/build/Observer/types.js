@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomerDisplay = void 0;
 class CustomerDisplay {
     update(order) {
-        console.log(`${order} is Ready`);
+        console.log(`Order is Ready`);
     }
 }
 exports.CustomerDisplay = CustomerDisplay;
