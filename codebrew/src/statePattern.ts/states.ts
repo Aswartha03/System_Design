@@ -1,3 +1,4 @@
+import { CustomerDisplay } from "../Observer/types";
 import { Order, StateType } from "./types";
 
 export class Pending implements StateType {
@@ -24,8 +25,11 @@ export class Preparing implements StateType {
 
 export class Ready implements StateType {
   proceedToNextState(order: Order): void {
+    let customerDisplay = new CustomerDisplay()
+    customerDisplay.update(order)
     console.log("Order Moved Ready -> Completed");
     order.state = new Completed();
+    
   }
   cancelOrder(order: Order): void {
     console.log("Order cancelled from Ready");

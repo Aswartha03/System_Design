@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cancelled = exports.Completed = exports.Ready = exports.Preparing = exports.Pending = void 0;
+const types_1 = require("../Observer/types");
 class Pending {
     proceedToNextState(order) {
         console.log("order Moved Pending-> Preparing");
@@ -25,6 +26,8 @@ class Preparing {
 exports.Preparing = Preparing;
 class Ready {
     proceedToNextState(order) {
+        let customerDisplay = new types_1.CustomerDisplay();
+        customerDisplay.update(order);
         console.log("Order Moved Ready -> Completed");
         order.state = new Completed();
     }
